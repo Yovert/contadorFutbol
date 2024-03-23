@@ -1,0 +1,24 @@
+<section class="container">
+    <div  class="title">
+        <div class="logo">
+            <img src="../../../assets/logo_paris.png" alt="">
+        </div>
+        <div class="name_team">
+          <p>PARIS S-G</p>
+        </div>
+    </div>
+    <div class="notifi">
+      @if (ganandoOne) {
+        <p class="ganando">VAMOS GANANDO NOJODAA</p>
+      }
+      @if (empateOne) {
+      <p class="empate">EMPATE</p>
+      }
+      @if (perdiendoOne) {
+        <p class="perdiendo">VAMOS PERDIENDO</p>
+      }
+    </div>
+    <div class="btnGol">
+      <button (click)="golEnv()">Goool!</button>
+    </div>
+</section>

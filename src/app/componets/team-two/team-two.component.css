@@ -1,0 +1,87 @@
+.container
+{
+  width: 24vw;
+  height: 12vw;
+  background: rgba(255, 255, 255, 0.253);
+  border-radius: 1.5vw 1.5vw 0.5vw 0.5vw;
+  box-shadow: 0.2vh 0.2vh 0.2vh 0.2vh ;
+}
+.title
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  gap: 1vw;
+  left: 1vw;
+  top: -1vw;
+  border-radius: 1vw;
+  height: 4vw;
+  color: white;
+}
+.name_team
+{
+  height: 3vw;
+  padding: 0vw 1vw;
+  display: flex;
+  align-items: center;
+  border-radius: 0vw 1vw 1vw 1vw;
+  border: 0.4vh solid black;
+  color: black;
+}
+.logo
+{
+  width: 4vw;
+}
+.logo img{
+  width: 100%;
+}
+.notifi{
+  margin-top: 1vw;
+  padding-left: 0.4vw;
+}
+@keyframes desvanecer {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.perdiendo {
+  animation: desvanecer 3s ease infinite;
+}
+
+.btnGol{
+  width: 10vw;
+  position: relative;
+  left: 13vw;
+  top: 1vw;
+}
+.btnGol button{
+  width: 10vw;
+  height: 3vw;
+  font-family: "Kode Mono", monospace;
+  border: none;
+  border-radius: 1vw;
+  background: rgb(0, 183, 255);
+  font-size: 1.3vw;
+  cursor: pointer;
+}
+@keyframes rotar {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(360deg); }
+
+}
+
+.btnGol :focus{
+  animation: rotar 2s linear;
+}
+
+@keyframes desplazar {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(60px); }
+  100% { transform: translateX(0); }
+}
+
+.ganando{
+  animation: desplazar 3s ease infinite;
+}

@@ -1,0 +1,64 @@
+<main>
+  @if (contentGanador) {
+  <section class="containerGanador">
+    <div class="teamGanador">
+      <h2>Juego Terminado</h2>
+      <p>{{TeamGanador}}</p>
+    </div>
+  </section>
+  }
+  <section class="tasks">
+    <div class="title_equipo">
+      <div class="equipo">
+        <div class="logo_equipo">
+          <img src="../../../assets/logo_paris.png" alt="">
+        </div>
+        <div class="title_equipo_nombre">
+          <p>PARIS S-G</p>
+        </div>
+      </div>
+      <div class="versus">
+        <h2><span>V</span>S</h2>
+      </div>
+      <div class="equipo">
+        <div class="title_equipo_nombre name_two">
+          <p>BARCELONA</p>
+        </div>
+        <div class="logo_equipo">
+          <img src="../../../assets/logo_barcelona" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="contador">
+      <input id="color_white" type="number" name="team_one" value="0" disabled [(ngModel)]="team_one">
+      <p>:</p>
+      <input type="number" name="team_two" value="0" disabled [(ngModel)]="team_two">
+    </div>
+    <div class="time">
+      <div class="time_contador">
+        <p>{{tiempo}}</p>
+      </div>
+      <h3> {{ultimoTiempo}}  {{ultimoSegundo}} </h3>
+      <h4> {{mensajeInicio}} {{empezarPartido}} </h4>
+    </div>
+  </section>
+
+  <section class="equipos">
+    <app-team-one
+    (enviarGolTeamOne)="getGolTeamOne($event)"
+    [ganandoOne]="ganandoOneP"
+    [empateOne]="empateOneP"
+    [perdiendoOne]="perdiendoOneP"></app-team-one>
+
+    <div class="btnIniciar">
+        <button class="init" (click)="iniciarPartido()" [disabled]="disablebtnIniciar">Iniciar Partido</button>
+    </div>
+
+    <app-team-two
+    (enviarGolTeamTwo)="getGolTeamTwo($event)"
+    [ganandoTwo]="ganandoTwoP"
+    [empateTwo]="empateTwoP"
+    [perdiendoTwo]="perdiendoTwoP"></app-team-two>
+  </section>
+</main>
+
